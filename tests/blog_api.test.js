@@ -103,6 +103,22 @@ describe('deleting blogs', () => {
 });
 
 describe('updating blogs', () => {
+    test('blog can be updated', async () => {
+        const updatedBlog = {
+            author: 'Blog Author Update',
+            title: 'Blog Title Update',
+            content: 'Blog Content Update',
+        };
+        // get all articles
+        const blogs = await request.get('/api/blogs');
+        // find the article to update
+        const blogToUpdate = blogs.body[0];
+        // update article
+        await request
+            .put(`/api/blogs/${blogToUpdate.id}`, updatedBlog)
+            .expect(204)
+    });
+
     test('blog with malformatted id cannot be updated', async () => {
         const updatedBlog = {
             author: 'Blog author update',
