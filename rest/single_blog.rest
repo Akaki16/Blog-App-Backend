@@ -1,0 +1,2 @@
+GET http://localhost:5009/api/blogs/#blog_id
+Content-Type: application/json

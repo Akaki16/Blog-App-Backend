@@ -1,0 +1,8 @@
+PUT http://localhost:5009/api/blogs/#blog_id
+Content-Type: application/json
+
+{
+    "author": "Blog New Author",
+    "title": "Blog New Title",
+    "content": "Blog New Content"
+}
