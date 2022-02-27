@@ -61,7 +61,7 @@ router.put('/:id', async (req, res) => {
         content: body.content,
     };
 
-    const updatedBlog = await Blog.findByIdAndUpdate(req.params.id, article, { new: true });
+    const updatedBlog = await Blog.findByIdAndUpdate(req.params.id, blog, { new: true });
 
     if (updatedBlog) {
         res.status(204).end();
