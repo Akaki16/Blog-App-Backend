@@ -64,7 +64,7 @@ router.put('/:id', async (req, res) => {
     const updatedBlog = await Blog.findByIdAndUpdate(req.params.id, blog, { new: true });
 
     if (updatedBlog) {
-        res.status(204).end();
+        res.status(201).json(updatedBlog);
     } else {
         res.status(400).json({ error: 'blog cannot be updated' });
     }
