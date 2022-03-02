@@ -6,7 +6,7 @@ blogs api is fully tested using [supertest](https://www.npmjs.com/package/supert
 
 base url - `https://stormy-hamlet-49486.herokuapp.com/api/blogs`
 
-## Teck Stack
+## Tech Stack
 
 * Node - (JavaScript run-time)
 * Express - (Node.js framework)
